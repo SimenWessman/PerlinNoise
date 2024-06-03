@@ -10,6 +10,9 @@ window = pg.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pg.display.set_caption(WINDOW_TITLE)
 
 def main():
+
+    myGrid = Grid(WINDOW_WIDTH, WINDOW_HEIGHT, 8)
+    
     while True:
         for event in pg.event.get():
             if event.type == pg.QUIT:
@@ -17,7 +20,6 @@ def main():
                 sys.exit()
         window.fill((107, 171, 255))
 
-        myGrid = Grid(WINDOW_WIDTH, WINDOW_HEIGHT, 8)
         myGrid.draw(window)
 
         pg.display.flip()
